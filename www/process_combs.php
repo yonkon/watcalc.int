@@ -12,6 +12,22 @@ require_once('safemysql.class.php');
 
 $db = new SafeMySQL(array('user' => 'root', 'pass' => '103103103', 'db' => 'watcalc'));
 
+$cols = array(
+  'ph' => 'Ph',
+  'hs' => 'Запах сероводорода',
+  'po' => 'Окисляемость перманганатная, мг/л О<sub>2</sub>sub>',
+  'fe' => 'Железо общее мг/л',
+  'hd' => 'Жесткость общая, мг-экв/л',
+  'sn' => 'Производительность',
+  'mn' => 'Мутность',
+  'uf' => 'Обеззараживание воды',
+  'perf' => '?'
+);
+foreach($cols as $col => $name) {
+  $db->query("INSERT INTO `calc_criteria`(`column`, `name`) VALUES ('{$col}', '{$name}')");
+}
+die('OK');
+
 $combs = $db->getAll('SELECT * FROM raw');
 foreach($combs as $comb) {
   //http://www.wisewater.ru/js/jquery.ekodar.extended.podbor_shemy/images/7.jpg
