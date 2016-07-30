@@ -9,6 +9,7 @@ error_reporting(-1);
  */
 header('Access-Control-Allow-Origin: *');
 die('closed');
+
 require_once('safemysql.class.php');
 
 $db = new SafeMySQL(array('user' => 'root', 'pass' => '103103103', 'db' => 'watcalc'));
@@ -24,29 +25,7 @@ $cols = array(
   'uf' => 'Обеззараживание воды',
   'perf' => '?'
 );
-
-$combs = $db->getAll('SELECT * FROM raw');
-foreach($combs as $comb) {
-  //http://www.wisewater.ru/js/jquery.ekodar.extended.podbor_shemy/images/7.jpg
-  $fname = $comb['result'].'.jpg';
-  if(file_exists($fname)) {
-    continue;
-  }
-  $url = 'http://www.wisewater.ru/js/jquery.ekodar.extended.podbor_shemy/images/' . $fname;
-  grab_image($url, $fname);
+foreach($cols as $col => $name) {
+  $db->query("INSERT INTO `calc_criteria`(`column`, `name`) VALUES ('{$col}', '{$name}')");
 }
-
-function grab_image($url,$saveto){
-  $ch = curl_init ($url);
-  curl_setopt($ch, CURLOPT_HEADER, 0);
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-  curl_setopt($ch, CURLOPT_BINARYTRANSFER,1);
-  $raw=curl_exec($ch);
-  curl_close ($ch);
-  if(file_exists($saveto)){
-    unlink($saveto);
-  }
-  $fp = fopen($saveto,'x');
-  fwrite($fp, $raw);
-  fclose($fp);
-}
+die('OK');
