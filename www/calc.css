@@ -5,7 +5,20 @@
 
 .watcalc-header {
   padding: 18px;
-  background: grey;
+  text-align: right;
+  /*border-radius: 5px 5px 0 0;*/
+  /*background: #1179cf;*/
+  font-size: 16px;
+  font-weight: normal;
+  color: #ffffff;
+  background: #79c614;
+  background: -moz-linear-gradient(top, #79c614 0%, #2e971c 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #79c614), color-stop(100%, #2e971c));
+  background: -webkit-linear-gradient(top, #79c614 0%, #2e971c 100%);
+  background: -o-linear-gradient(top, #79c614 0%, #2e971c 100%);
+  background: -ms-linear-gradient(top, #79c614 0%, #2e971c 100%);
+  background: linear-gradient(to bottom, #79c614 0%, #2e971c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#79c614', endColorstr='#2e971c', GradientType=0 );
 }
 .watcalc-header h2{
   float: right;
@@ -38,11 +51,11 @@
   cursor: pointer;
 }
 .watcalc-input:hover {
-  background: darkgrey;
+  background: #d8e9f0;
 }
 
 .watcalc-cell.active {
-  background-color: #dad3d3;
+  background-color: #c0e1f2;
   box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.1) inset;
 }
 
@@ -85,7 +98,7 @@
 .watcalc-input .tip:hover {display: block}
 
 .watcalc-cell.btn {
-  background: green;
+  background: #1179cf;
   width: 60px;
 }
 .watcalc-cell.btn a span {
@@ -93,6 +106,11 @@
   display: inline-block;
   position: absolute;
   right: 0;
+  left: 0;
+  color : white;
+  font-weight: bold;
+  font-size: 13pt;
+  padding: 12px 0;
 }
 .watcalc-cell.btn a {
   position: relative;
@@ -106,10 +124,79 @@
 .reset {
   background: indianred;
 }
+.interact {
+  background: #0ac285;
+}
 .interact, .reset {
   cursor: pointer;
+  color : white;
+  font-weight: bold;
+  font-size: 13pt;
 }
 
 .calc-alert {
   color: indianred;
+}
+
+img.scheme {
+  width: 100%;
+}
+
+#scheme_id {
+  background: #c0e1f2;
+  padding: 5px 20px;
+  text-align : right;
+  line-height: 30px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.scheme-value {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@media print {
+  body {
+    width : 100%;
+  }
+  .first-menu,
+  #bot-head,
+  .search,
+  .slogan,
+  #modal_side_bar,
+  #left-bar,
+  .watcalc-cell:last-child,
+  .watcalc-row:last-child,
+  .w100,
+  #to-top,
+  #scheme_details .actions,
+  .foot-block
+  {
+    display : none;
+  }
+  .watcalc-cell {
+    border: 0.1cm solid grey;
+  }
+  .watcalc-cell.active {
+    border: 0.2cm solid black !important;
+    box-shadow : none;
+  }
+  #main-content {
+    margin-left: 10px;
+  }
+  #full-wrap {
+    min-height : calc(100% - 100px);
+  }
+  .time {
+    right: 668px;
+  }
+  .phone {
+    right: 320px;
+  }
+  #scheme_details
+  {
+    page-break-before: always;
+  }
+
 }

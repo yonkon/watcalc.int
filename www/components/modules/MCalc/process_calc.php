@@ -13,7 +13,7 @@ if(empty($scheme) ) {
     $antwoord = jsonAnswer('OK', 'error', array('scheme' => '<p class="calc-alert">Невозможно определить схему по вашему запросу, всего найдено '. $schcount . ' результатов. Уточните запрос или <a href="/callback"> свяжитесь со специалистом</a></p>')) ;
     die($antwoord);
   }
-  $html = getSchemeFrontHtml($scheme[0]);
+  $html = getSchemeFrontDetailsHtml($scheme[0]);
   if($html) {
     $antwoord = jsonAnswer('OK', 'OK', array('scheme' => $html)) ;
   } else {

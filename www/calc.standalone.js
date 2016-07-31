@@ -22,7 +22,7 @@ $(document).ready(function() {
             data[col] = val;
         });
         $.ajax({
-            url : '/calc/scheme/',
+            url : '/process_calc.php',
             data : {criteria : data},
             type : 'post',
             error : function(err) {

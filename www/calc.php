@@ -73,6 +73,6 @@ $groups = getEnabledInputsGroups($db);
   <div id="scheme"></div>
 </div>
 
-<script type="text/javascript" src="/calc.js"></script>
+<script type="text/javascript" src="/calc.standalone.js"></script>
 </body>
 </html>
