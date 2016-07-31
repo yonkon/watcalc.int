@@ -98,7 +98,7 @@
 .watcalc-input .tip:hover {display: block}
 
 .watcalc-cell.btn {
-  background: #1179cf;
+  background: #1179cf url('/design/default/img/btn-go.png') no-repeat center;
   width: 60px;
 }
 .watcalc-cell.btn a span {
