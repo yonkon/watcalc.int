@@ -1,7 +1,6 @@
 <?php
-//header('Powered: test');
-//header('Content-Type: text/html; charset=utf-8');
-require_once(__DIR__ .'/calc_functions.php');
+
+require_once(__DIR__.'/calc_functions.php');
 
 $db = new SafeMySQL(array('user' => 'root', 'pass' => '103103103', 'db' => 'watcalc'));
 $scheme = findSchemeByCriteria($db, $_REQUEST['criteria']);

@@ -1,6 +1,6 @@
 
 .watcalc {
-  width: 1024px;
+  width: 100%;
 }
 
 .watcalc-header {
@@ -86,7 +86,7 @@
 
 .watcalc-cell.btn {
   background: green;
-  width: 100px;
+  width: 60px;
 }
 .watcalc-cell.btn a span {
   bottom: 0;

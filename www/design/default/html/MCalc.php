@@ -1,23 +1,13 @@
 <?php
-header('Powered: test');
-header('Content-Type: text/html; charset=utf-8');
-//require_once('safemysql.class.php');
-require_once('calc_functions.php');
-//Standalone calc
-
+//TEMPLATE FOR FRONTEND
+require_once(SITE_DIR.'/components/modules/MCalc/calc_functions.php');
 
 $db = new SafeMySQL(array('user' => 'root', 'pass' => '103103103', 'db' => 'watcalc'));
 $groups = getEnabledInputsGroups($db);
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
   <script src="https://code.jquery.com/jquery-1.12.4.js"   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="   crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/calc.css">
 
-</head>
-<body>
 <div class="watcalc">
   <div class="watcalc-header"><h2>Онлайн смета</h2><div class="clr"></div> </div>
   <table class="watcalc-inputs">
@@ -74,5 +64,3 @@ $groups = getEnabledInputsGroups($db);
 </div>
 
 <script type="text/javascript" src="/calc.js"></script>
-</body>
-</html>

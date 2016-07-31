@@ -1,0 +1,442 @@
+# Кодировка по умолчанию
+AddDefaultCharset utf-8
+<IfModule mod_charset.c>
+   CharsetRecodeMultipartForms Off
+   CharsetSourceEnc utf-8
+</IfModule>
+
+RewriteCond %{HTTP_HOST} ^watcalc\.int
+RewriteRule ^(.*)$ http://www.watcalc.int/$1 [R=permanent,L] .
+
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*[^/])$ $1/ [L,R=301]
+
+RewriteCond %{REQUEST_URI} ^/himvodopodgotovka/
+RewriteRule (.*) http://watcalc.int/vodopodgotovka/hvp/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/vodosnabzhenie/podbor-nasosa/
+RewriteRule (.*) http://watcalc.int/vodosnabzhenie/obustroystvo-skvazhiny/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/sistemi-ochistki-vodi-dom-i-ofis/
+RewriteRule (.*) http://watcalc.int/sistemi-ochistki-vodi-dom/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/vodoochistka_proizvodstvo/
+RewriteRule (.*) http://watcalc.int/sistemi-ochistki-vodi-promyshlennost/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/services/vodoochistka/
+RewriteRule (.*) http://watcalc.int/vodoochistka/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/services/analiz_vodi/
+RewriteRule (.*) http://watcalc.int/analiz-vody/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/services/razrabotka-proekta-vodoochistki/
+RewriteRule (.*) http://watcalc.int/uslugi/proektirovanie/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/services/montaj-i-puska-naladka-oborudovaniya/
+RewriteRule (.*) http://watcalc.int/uslugi/montazh-i-puskonaladka/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/services/garantiynoe-i-servisnoe-obslujivanie/
+RewriteRule (.*) http://watcalc.int/uslugi/garantiynoe-i-servisnoe-obsluzhivanie/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/services/vodosnabjenie/
+RewriteRule (.*) http://watcalc.int/vodosnabzhenie/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/services/burenie-skvajin/
+RewriteRule (.*) http://watcalc.int/vodosnabzhenie/burenie-skvazhin/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/services/razrabotka-proekta-vodosnabjeniya/
+RewriteRule (.*) http://watcalc.int/vodosnabzhenie/razrabotka-proekta/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/services/himvodopodgotovka/
+RewriteRule (.*) http://watcalc.int/himvodopodgotovka/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/services/ochistka-kotlov/
+RewriteRule (.*) http://watcalc.int/ochistka-oborudovaniya/ochistka-kotlov/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/gallery/
+RewriteRule (.*) http://watcalc.int/raboty/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/index.php?page=429&news=109
+RewriteRule (.*) http://watcalc.int/raboty/montazh-so-kp-solnechnyi-bereg/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/index.php?page=429&news=108
+RewriteRule (.*) http://watcalc.int/raboty/montazh-so-dnp-kamenka/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/index.php?page=429&news=107
+RewriteRule (.*) http://watcalc.int/raboty/montazh-so-poselok-elizarovo/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/index.php?page=429&news=105
+RewriteRule (.*) http://watcalc.int/raboty/montazh-so-zao-russkoe-more/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/services/
+RewriteRule (.*) http://watcalc.int/uslugi/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/about/
+RewriteRule (.*) http://watcalc.int/o-kompanii/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/infos/
+RewriteRule (.*) http://watcalc.int/articles/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/index.php?page=371&news=94
+RewriteRule (.*) http://watcalc.int/articles/metody-ochistki-vody-dlya-zagorodnyh-domov-i-kottedzhey/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/contacts/map/
+RewriteRule (.*) http://watcalc.int/contacts/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/gallery/foto/
+RewriteRule (.*) http://watcalc.int/raboty/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/gallery/video/
+RewriteRule (.*) http://watcalc.int/raboty/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/index.php?page=429&news=104
+RewriteRule (.*) http://watcalc.int/raboty/montazh-so-derevnja-hazelki/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/index.php?page=429&news=103
+RewriteRule (.*) http://watcalc.int/raboty/montazh-so-cnt-orbita/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/index.php?page=429&news=102
+RewriteRule (.*) http://watcalc.int/raboty/montazh-so-kp-lukomore/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/index.php?page=195&news=110
+RewriteRule (.*) http://watcalc.int/news/analiz-vody-po-18-pokazatelyam/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/index.php?page=195&news=111
+RewriteRule (.*) http://watcalc.int/news/vystavka-kotly-i-gorelki-2013/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/purifayeri/
+RewriteRule (.*) http://shop.watcalc.int/purifaiery-ecotronic/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/aeracionnie-sistemi/
+RewriteRule (.*) http://shop.watcalc.int/aeracionnie-kolonny/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/osadochnie-filtri/
+RewriteRule (.*) http://shop.watcalc.int/osadochnie-filtri/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/sorbcionnie-filtri/
+RewriteRule (.*) http://shop.watcalc.int/sorbcionnie-filtri/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/filtri-reagentnogo-obezjelezivaniya/
+RewriteRule (.*) http://shop.watcalc.int/filtry-ot-zheleza/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/filtri-bezreagentnogo-obezjelezivaniya/
+RewriteRule (.*) http://shop.watcalc.int/filtry-ot-zheleza/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/filtri-umyagchiteli/
+RewriteRule (.*) http://shop.watcalc.int/filtri-umyagchiteli/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/balloni-dlya-sistem-filtracii/
+RewriteRule (.*) http://shop.watcalc.int/korpusa-zasypnyh-filtrov/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/bitovie-filtri/
+RewriteRule (.*) http://shop.watcalc.int/bytovye-filtry/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/kartridji-dlya-filtrov/
+RewriteRule (.*) http://shop.watcalc.int/kartridji-dlya-filtrov/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/korpusa-filtrov/
+RewriteRule (.*) http://shop.watcalc.int/magistralnye-filtry/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/klapani-upravleniya/
+RewriteRule (.*) http://shop.watcalc.int/klapani-upravleniya/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/magistralnie-filtri/
+RewriteRule (.*) http://shop.watcalc.int/filtry-gruboy-ochistki/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/napolniteli-dlya-sistem-filtracii/
+RewriteRule (.*) http://shop.watcalc.int/napolniteli-dlya-sistem-filtracii/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/chemical/
+RewriteRule (.*) http://shop.watcalc.int/reagenty-dlya-vodopodgotovki/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/obratniy-osmos/
+RewriteRule (.*) http://shop.watcalc.int/obratnyi-osmos/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/ultrafioletovie-sterilizatori/
+RewriteRule (.*) http://shop.watcalc.int/uf-sterilizatory/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/nasosnie-stancii/
+RewriteRule (.*) http://shop.watcalc.int/nasosnye-stancii/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/nasosi-skvajinnie/
+RewriteRule (.*) http://shop.watcalc.int/nasosy-skvazhinnye/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/samovsasivayushie-nasosi/
+RewriteRule (.*) http://shop.watcalc.int/samovsasyvayushchie-nasosy/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/nasosi-cirkulyacionnie/
+RewriteRule (.*) http://shop.watcalc.int/nasosy-cirkulyacionnye/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/nasosi-drenajnie/
+RewriteRule (.*) http://shop.watcalc.int/nasosy-drenazhnye/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/nasosi-fekalnie/
+RewriteRule (.*) http://shop.watcalc.int/nasosy-fekalnye/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/membrannie-baki/
+RewriteRule (.*) http://shop.watcalc.int/membrannie-baki/  [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/catalog/schetchiki-dlya-vodi/
+RewriteRule (.*) http://shop.watcalc.int/schetchiki-dlya-vodi/  [R=301,L]
+
+######
+
+
+# Если PHP5 установлен как модуль Apache 1/2, то устанавливаем некоторые опции php
+<IfModule mod_php5.c>
+	php_value magic_quotes_gpc		0
+	php_value register_globals		0
+</IfModule>
+
+# Отключаем волшебные кавычки
+php_flag magic_quotes_gpc Off
+php_flag magic_quotes_runtime Off
+
+# Загрузка файлов
+php_value max_execution_time 500
+php_value max_input_time 500
+php_value upload_max_filesize 30M
+php_value post_max_size 30M
+
+# Правила изменеия запросов ("чистые" ссылки)
+<IfModule mod_rewrite.c>
+    ErrorDocument 404 /404
+	RewriteEngine On
+	RewriteBase /
+        
+    # Каталог товара
+    RewriteRule ^catalog/new/?$ Index.php?module=products&type=new [L,QSA]
+    RewriteRule ^catalog/recommended/?$ Index.php?module=products&type=recommended [L,QSA]
+    RewriteRule ^catalog/hit/?$ Index.php?module=products&type=hit [L,QSA]
+    RewriteRule ^catalog/sale/?$ Index.php?module=products&type=sale [L,QSA]
+    
+    RewriteRule ^catalog/?$ Index.php?module=catalogs [L,QSA]
+    RewriteRule ^catalog/([^/]+)/?$	Index.php?module=catalog&category=$1 [L,QSA]
+    RewriteRule ^catalog/([^/]+)/([^/]+)/?$	Index.php?module=catalog&category=$1&brand=$2 [L,QSA]
+    # Тип товара (новинки, хиты, акция)
+    RewriteRule ^products/([^/]+)/?$ Index.php?module=products&type=$1 [L,QSA]
+    # Портфолио
+    RewriteRule ^raboty/?$ Index.php?module=portfolio [L,QSA]
+    RewriteRule ^raboty/([^/]+)/?$ Index.php?module=portfolio&album=$1 [L,QSA]
+    # Бренды
+    RewriteRule ^brand/([^/]+)/?$ Index.php?module=brand&brand=$1 [L,QSA]
+    RewriteRule ^brands/?$ Index.php?module=brands [L,QSA]
+    #FAQ
+    RewriteRule ^faq/?$	Index.php?module=faq [L,QSA]
+    #Online Calculator
+    RewriteRule ^calc/scheme/?$	Index.php?module=calc&action=scheme [L,QSA]
+    RewriteRule ^calc/?$	Index.php?module=calc [L,QSA]
+    # Контакты
+    RewriteRule ^contacts/?$ Index.php?module=contacts [L,QSA]
+    # Блог
+    RewriteRule ^news/([^/]+)/?$ Index.php?module=blog&post=$1 [L,QSA]
+    RewriteRule ^news/?$ Index.php?module=blog [L,QSA]
+    # Сравнение
+    RewriteRule ^compare/?$	Index.php?module=compare [L,QSA]
+    # Фильтр
+    RewriteRule ^filter/?$ Index.php?module=filter [L,QSA]
+    # Отзывы
+    RewriteRule ^reviews/([^/]+)/?$ Index.php?module=reviews&id=$1 [L,QSA]
+    RewriteRule ^reviews/?$	Index.php?module=reviews [L,QSA]
+    # Статьи
+    RewriteRule ^articles/([^/]+)/?$ Index.php?module=articles&post=$1 [L,QSA]
+    RewriteRule ^articles/?$ Index.php?module=articles [L,QSA]
+    # Корзина
+    RewriteRule ^cart/?$ Index.php?module=cart [L,QSA]
+    RewriteRule ^order/?$ Index.php?module=order [L,QSA]
+    # Товар
+    RewriteRule ^analiz-vody/([^/]+)/([^/]+)/?$	Index.php?module=product&url=analiz-vody&page=$1&urlp=$2 [L,QSA]
+    RewriteRule ^sistemy-ochistki/([^/]+)/([^/]+)/?$	Index.php?module=product&url=sistemy-ochistki&page=$1&urlp=$2 [L,QSA]
+    #RewriteRule ^vodopodgotovka/([^/]+)/([^/]+)/?$	Index.php?module=product&url=vodopodgotovka&page=$1&urlp=$2 [L,QSA]
+    RewriteRule ^vodosnabzhenie/([^/]+)/([^/]+)/?$	Index.php?module=product&url=vodosnabzhenie&page=$1&urlp=$2 [L,QSA]
+    RewriteRule ^ochistka-oborudovaniya/([^/]+)/([^/]+)/?$	Index.php?module=product&url=ochistka-oborudovaniya&page=$1&urlp=$2 [L,QSA]
+    
+    # Поиск
+    RewriteRule ^search/?$ Index.php?module=search [L,QSA]
+    # Теги
+    RewriteRule ^tags/?$ Index.php?module=tags [L,QSA]
+    # Страницы
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([^/]*)/?$	Index.php?module=topMenu&page=$1 [L,QSA] # верхнее меню
+    RewriteRule ^([^/]+)/([^/]+)/?$	Index.php?module=topMenu&url=$1&page=$2 [L,QSA] # верхнее меню
+    RewriteRule ^vodopodgotovka/([^/]+)/([^/]+)/?$	Index.php?module=topMenu&url=vodopodgotovka&page2=$1&page=$2 [L,QSA] # верхнее меню
+  
+    RewriteRule ^files/doc/?$	/files/doc/ [L,QSA]
+  
+</IfModule>
+
+# Файлы, к которым заперщено обращаться напрямую
+<Files ~ "((readme\.txt)|(\.(htaccess|sql|php)))$">
+	Order deny,allow
+	Deny from all
+</Files>
+# Разрешено обращаться
+<Files "Index.php">
+    Allow from all
+</Files>
+<Files "index.php">
+    Allow from all
+</Files>
+<Files "Rss.php">
+    Allow from all
+</Files>
+<Files "AjaxUpdate.php">
+    Allow from all
+</Files>
+
+<Files "price.php">
+    Allow from all
+</Files>
+
+
+<Files "UploadImages.php">
+    Allow from all
+</Files>
+<Files "form2.php">
+    Allow from all
+</Files>
+
+<Files "Sibloma.php">
+    Allow from all
+</Files>
+<Files "WCompare.php">
+    Allow from all
+</Files>
+<Files "YandexMarket.php">
+    Allow from all
+</Files>
+<Files "WCallBack.php">
+    Allow from all
+</Files>
+<Files "WCallBack2.php">
+    Allow from all
+</Files>
+<Files "WCallBack2_spec.php">
+    Allow from all
+</Files>
+<Files "WCallBack2_pay.php">
+    Allow from all
+</Files>
+<Files "WCallBack2_cons.php">
+    Allow from all
+</Files>
+<Files "WCallBack2_ser.php">
+    Allow from all
+</Files>
+<Files "WCallBack2_send.php">
+    Allow from all
+</Files>
+<Files "WCallBack2_wat.php">
+    Allow from all
+</Files>
+<Files "WCallBack_wat.php">
+    Allow from all
+</Files>
+<Files "WCallBack_ser.php">
+    Allow from all
+</Files>
+<Files "WCallBack2_water.php">
+    Allow from all
+</Files>
+<Files "WInterview.php">
+    Allow from all
+</Files>
+<Files "PReportAvailability.php">
+    Allow from all
+</Files>
+<Files "UpdateSystem.php">
+    Allow from all
+</Files>
+<Files "SiteMap.php">
+    Allow from all
+</Files>
+<Files "Result.php">
+    Allow from all
+</Files>
+<Files "Success.php">
+    Allow from all
+</Files>
+<Files "Err.php">
+    Allow from all
+</Files>
+<Files "Err.php">
+    Allow from all
+</Files>
+<Files "POneClickOrder.php">
+    Allow from all
+</Files>
+<Files "WRegister.php">
+    Allow from all
+</Files>
+<Files "PPayment.php">
+    Allow from all
+</Files>
+<Files "ReceiptPDF.php">
+    Allow from all
+</Files>
+<Files "PQuickView.php">
+    Allow from all
+</Files>
+
+# Если mod_rewrite отключен, то устанвливаем index файл
+<IfDefine !RewriteEngine>
+	DirectoryIndex Index.php
+</IfDefine>
+
+# кеширование в браузере на стороне пользователя
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access 7 days"
+ExpiresByType application/javascript "access plus 1 year"
+ExpiresByType text/javascript "access plus 1 year"
+ExpiresByType text/css "access plus 1 year"
+ExpiresByType text/html "access plus 7 day"
+ExpiresByType text/x-javascript "access 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresByType application/x-shockwave-flash "access 1 year"
+</IfModule>
+
+# Cache-Control
+<ifModule mod_headers.c>
+# 30 дней
+<filesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|swf)$">
+Header set Cache-Control "max-age=2592000, public"
+</filesMatch>
+# 30 дней
+<filesMatch "\.(css|js)$">
+Header set Cache-Control "max-age=2592000, public"
+</filesMatch>
+# 2 дня
+<filesMatch "\.(xml|txt)$">
+Header set Cache-Control "max-age=172800, public, must-revalidate"
+</filesMatch>
+# 1 день
+<filesMatch "\.(html|htm|php)$">
+Header set Cache-Control "max-age=172800, private, must-revalidate"
+</filesMatch>
+</ifModule>
+
+# использование кеша браузеров
+FileETag MTime Size
+<ifmodule mod_expires.c>
+<filesmatch ".(jpg|jpeg|gif|png|ico|css|js)$">
+ExpiresActive on
+ExpiresDefault "access plus 1 year"
+</filesmatch>
+</ifmodule>
+
+#Запрет отдачи HTTP-заголовков Vary браузерам семейства MSIE
+<IfModule mod_setenvif.c>
+BrowserMatch "MSIE" force-no-vary
+BrowserMatch "Mozilla/4.[0-9]{2}" force-no-vary
+</IfModule>
+
+#Action php5.3-script  /cgi-bin/php5.3.cgi
+#AddType php5.3-script .php
